@@ -7,6 +7,7 @@ Shows real-time weather info for any city worldwide with **Day/Night theme** swi
 ![Flutter](https://img.shields.io/badge/Flutter-3.19.5-blue?style=flat-square&logo=flutter)
 ![Dart](https://img.shields.io/badge/Dart-3.3.1-blue?style=flat-square&logo=dart)
 ![GetX](https://img.shields.io/badge/GetX-4.6.5-red?style=flat-square)
+![HTTP](https://img.shields.io/badge/HTTP-0.15.0-blue?style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
 ---
@@ -14,9 +15,10 @@ Shows real-time weather info for any city worldwide with **Day/Night theme** swi
 ### 📸 Screenshots
 
 <div align="center">
-<img src="screenshots/Screenshot_20250826_154040.png" width="250" />&nbsp;
-<img src="screenshots/Screenshot_20250826_154300.png" width="250" />&nbsp;
-<img src="screenshots/Screenshot_20250826_154557.png" width="250" />
+<img width="1080" height="2280" alt="Screenshot_20250826_154040" src="https://github.com/user-attachments/assets/4f5106d3-e811-446a-9fad-252697b44659" />
+<img width="1080" height="2280" alt="Screenshot_20250826_154300" src="https://github.com/user-attachments/assets/23f978f5-d1c9-47e0-955b-b26240e121a2" />
+<img width="1080" height="2280" alt="Screenshot_20250826_154557" src="https://github.com/user-attachments/assets/48362ba2-4e48-415e-87e6-688615241800" />
+
 </div>
 
 ---
