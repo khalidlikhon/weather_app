@@ -15,9 +15,22 @@ Shows real-time weather info for any city worldwide with **Day/Night theme** swi
 ### 📸 Screenshots
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/4f5106d3-e811-446a-9fad-252697b44659" alt="Search Interface" width="30%" />
-  <img src="https://github.com/user-attachments/assets/23f978f5-d1c9-47e0-955b-b26240e121a2" alt="Day Theme" width="30%" />
-  <img src="https://github.com/user-attachments/assets/48362ba2-4e48-415e-87e6-688615241800" alt="Night Theme" width="30%" />
+
+<div style="display: inline-block; margin: 10px; text-align: center;">
+  <b>🔎 Initial Search</b><br>
+  <img src="https://github.com/user-attachments/assets/4f5106d3-e811-446a-9fad-252697b44659" alt="Initial Search" width="30%"/>
+</div>
+
+<div style="display: inline-block; margin: 10px; text-align: center;">
+  <b>🌞 Day Theme</b><br>
+  <img src="https://github.com/user-attachments/assets/23f978f5-d1c9-47e0-955b-b26240e121a2" alt="Day Theme" width="30%"/>
+</div>
+
+<div style="display: inline-block; margin: 10px; text-align: center;">
+  <b>🌙 Night Theme</b><br>
+  <img src="https://github.com/user-attachments/assets/48362ba2-4e48-415e-87e6-688615241800" alt="Night Theme" width="30%"/>
+</div>
+
 </div>
 
 ---
