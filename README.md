@@ -1,7 +1,3 @@
-A responsive **Weather App** built with **Flutter** using **GetX**.  
-Shows real-time weather info for any city worldwide with **Day/Night theme** switching.
-
----
 
 ### ⚡ Tech & Tools
 ![Flutter](https://img.shields.io/badge/Flutter-3.19.5-blue?style=flat-square&logo=flutter)
