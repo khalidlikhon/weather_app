@@ -1,39 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app/models/apiClient.dart';
-import 'package:weather_app/models/weather_dataModel.dart';
-import 'package:weather_app/widgets/weatherContiner.dart';
+import 'package:get/get.dart';
+import '../widgets/weatherContiner.dart';
+import 'controller/_appController.dart';
 
-class WeatherScreen extends StatefulWidget {
-  const WeatherScreen({super.key});
+class WeatherScreen extends StatelessWidget {
+  WeatherScreen({Key? key}) : super(key: key);
 
-  @override
-  State<WeatherScreen> createState() => _WeatherScreenState();
-}
-
-class _WeatherScreenState extends State<WeatherScreen> {
-  TextEditingController cityController = TextEditingController();
-
-  bool isLoading = false;
-
-  Weather? weather;
-  final apiClient _apiClient = apiClient();
-
-  fetchWeather() async {
-    final cityName = cityController.text;
-    if (cityName.isEmpty) {
-      _customSnackBar(context, "Please enter a city name");
-      return;
-    }
-
-    setState(() => isLoading = true);
-
-    final result = await _apiClient.getWeatherInfo(cityName);
-    cityController.clear();
-    setState(() {
-      weather = result;
-      isLoading = false;
-    });
-  }
+  final WeatherController controller = Get.put(WeatherController());
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +20,6 @@ class _WeatherScreenState extends State<WeatherScreen> {
         backgroundColor: Colors.blue[400],
         centerTitle: true,
       ),
-
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(15.0),
@@ -59,68 +31,63 @@ class _WeatherScreenState extends State<WeatherScreen> {
                 height: 53,
                 padding: EdgeInsets.only(left: 15),
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12), // Rounded container
-                  color: Colors.grey[200], // Background color for the whole row
+                  borderRadius: BorderRadius.circular(12),
+                  color: Colors.grey[200],
                 ),
                 child: Row(
                   children: [
-                    // Search field
                     Expanded(flex: 3, child: _searchCityName()),
-                    // Get Weather button
                     Expanded(
                       child: SizedBox(
                         height: 53,
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             elevation: 1,
-                            backgroundColor: Colors.blue[400], // button color
+                            backgroundColor: Colors.blue[400],
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.all(
                                 Radius.circular(12),
                               ),
                             ),
                           ),
-                          onPressed: () {
-                            fetchWeather();
-                          },
-                          child: isLoading
-                              ? SizedBox(
-                                  height: 20,
-                                  width: 20,
-                                  child: CircularProgressIndicator(
-                                    strokeWidth: 2,
-                                    color: Colors.white,
-                                  ),
-                                )
-                              : Image.asset(
-                                  'assets/icons/search.png',
-                                  width: 24,
-                                  height: 24,
-                                ),
+                          onPressed: () => controller.fetchWeather(context),
+                          child: Obx(() {
+                            return controller.isLoading.value
+                                ? SizedBox(
+                                    height: 20,
+                                    width: 20,
+                                    child: CircularProgressIndicator(
+                                      strokeWidth: 2,
+                                      color: Colors.white,
+                                    ),
+                                  )
+                                : Image.asset(
+                                    'assets/icons/search.png',
+                                    width: 24,
+                                    height: 24,
+                                  );
+                          }),
                         ),
                       ),
                     ),
                   ],
                 ),
               ),
-
               SizedBox(height: 20),
-
-              // Placeholder for weather info
               Expanded(
                 child: Center(
-                  child: weather == null
-                      ? Text(
-                    'Weather info will appear here',
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.grey[600],
-                    ),
-                  )
-                      : WeatherContainer(weather: weather!)
-
-
-                )
+                  child: Obx(() {
+                    return controller.weather.value == null
+                        ? Text(
+                            'Weather info will appear here',
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: Colors.grey[600],
+                            ),
+                          )
+                        : WeatherContainer(weather: controller.weather.value!);
+                  }),
+                ),
               ),
             ],
           ),
@@ -129,10 +96,9 @@ class _WeatherScreenState extends State<WeatherScreen> {
     );
   }
 
-  // Search field widget
   Widget _searchCityName() {
     return TextField(
-      controller: cityController,
+      controller: controller.cityController,
       decoration: InputDecoration(
         hintText: 'Search city...',
         prefixIcon: Icon(Icons.search),
@@ -149,28 +115,4 @@ class _WeatherScreenState extends State<WeatherScreen> {
       ),
     );
   }
-
-  _customSnackBar(
-    BuildContext context,
-    String message, {
-    Color bgColor = Colors.redAccent,
-  }) {
-    final snackBar = SnackBar(
-      content: Text(
-        message,
-        style: TextStyle(color: Colors.white, fontSize: 16),
-      ),
-      backgroundColor: bgColor,
-      behavior: SnackBarBehavior.floating,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-      margin: EdgeInsets.all(15),
-      duration: Duration(seconds: 2),
-    );
-
-    ScaffoldMessenger.of(context).showSnackBar(snackBar);
-  }
-
-
-
-  /// Helper widget for details
 }
