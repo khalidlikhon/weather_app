@@ -12,6 +12,8 @@ Shows real-time weather info for any city worldwide with **Day/Night theme** swi
 
 ---
 
+### 📸 Screenshots
+
 <div align="center">
 
   <div style="display: inline-block; text-align: center; margin: 10px;">
@@ -33,8 +35,6 @@ Shows real-time weather info for any city worldwide with **Day/Night theme** swi
   </div>
 
 </div>
-
-
 
 ---
 
