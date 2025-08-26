@@ -15,17 +15,14 @@ Shows real-time weather info for any city worldwide with **Day/Night theme** swi
 ### 📸 Screenshots
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/4f5106d3-e811-446a-9fad-252697b44659" alt="Search Interface" width="30%" />
+  <p><b>Initial Search Screen (no city searched)</b></p>
+  <img src="https://github.com/user-attachments/assets/4f5106d3-e811-446a-9fad-252697b44659" alt="Initial Search Screen" width="30%" />
+
+  <p><b>Day Theme - Example City</b></p>
   <img src="https://github.com/user-attachments/assets/23f978f5-d1c9-47e0-955b-b26240e121a2" alt="Day Theme" width="30%" />
+
+  <p><b>Night Theme - Example City</b></p>
   <img src="https://github.com/user-attachments/assets/48362ba2-4e48-415e-87e6-688615241800" alt="Night Theme" width="30%" />
-</div>
-
-
----
-
-### 🎥 Demo Video
-<div align="center">
-[![Watch Demo](https://img.youtube.com/vi/TODO_ADD_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=TODO_ADD_VIDEO_ID)
 </div>
 
 ---
@@ -44,18 +41,9 @@ Shows real-time weather info for any city worldwide with **Day/Night theme** swi
 
 ### 🏗️ Architecture & Dependencies
 - **GetX**: State, route, dependency management, i18n ready  
-- **HTTP**: RESTful API integration & data parsing  
-- **intl**: Date/time formatting & localization  
-- **flutter_spinkit**: Loading animations  
+- **HTTP**: RESTful API integration & data parsing
 
 ---
-
-### 🚀 Getting Started
-#### Prerequisites
-- Flutter SDK ≥ 3.19.5  
-- Dart ≥ 3.3.1  
-- Android Studio or VS Code with Flutter extension  
-- Emulator or physical device  
 
 #### Installation
 ```bash
