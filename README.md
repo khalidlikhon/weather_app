@@ -14,16 +14,22 @@ Shows real-time weather info for any city worldwide with **Day/Night theme** swi
 
 ### 📸 Screenshots
 
-<div align="center">
-  <p><b>Initial Search Screen (no city searched)</b></p>
-  <img src="https://github.com/user-attachments/assets/4f5106d3-e811-446a-9fad-252697b44659" alt="Initial Search Screen" width="30%" />
-
-  <p><b>Day Theme - Example City</b></p>
-  <img src="https://github.com/user-attachments/assets/23f978f5-d1c9-47e0-955b-b26240e121a2" alt="Day Theme" width="30%" />
-
-  <p><b>Night Theme - Example City</b></p>
-  <img src="https://github.com/user-attachments/assets/48362ba2-4e48-415e-87e6-688615241800" alt="Night Theme" width="30%" />
-</div>
+<table>
+  <tr>
+    <td align="center">
+      <b>🔎 Initial Search</b><br><i>No city searched yet</i><br>
+      <img src="https://github.com/user-attachments/assets/4f5106d3-e811-446a-9fad-252697b44659" alt="Initial Search" width="200"/>
+    </td>
+    <td align="center">
+      <b>🌞 Day Theme</b><br><i>Example City - Dhaka</i><br>
+      <img src="https://github.com/user-attachments/assets/23f978f5-d1c9-47e0-955b-b26240e121a2" alt="Day Theme" width="200"/>
+    </td>
+    <td align="center">
+      <b>🌙 Night Theme</b><br><i>Example City - California</i><br>
+      <img src="https://github.com/user-attachments/assets/48362ba2-4e48-415e-87e6-688615241800" alt="Night Theme" width="200"/>
+    </td>
+  </tr>
+</table>
 
 ---
 
