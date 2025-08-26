@@ -36,6 +36,11 @@
 
 ---
 
+### 🌐 API & Data Source
+This app fetches real-time weather data using the **[WeatherAPI]**.  
+Thanks to **WeatherAPI** for providing accurate and developer-friendly weather data.
+
+---
 #### Installation
 ```bash
 git clone https://github.com/khalidlikhon/weather_app.git
